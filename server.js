@@ -9,6 +9,9 @@ const unitRoutes = require('./routes/unitRoutes');
 const ItemCategoryRoutes = require('./routes/ItemCategoryRoute');
 const ItemRoutes = require('./routes/itemRoutes');
 const RecipeExpertRoutes = require('./routes/recipeExpertRoutes');
+const BranchRoutes = require('./routes/branchRoutes');
+const BrandRoutes = require('./routes/brandRoute');
+const CurrencyRoutes = require('./routes/currenxyRoute');
 
 const app = express();
 app.use(cors());
@@ -36,6 +39,9 @@ app.use('/api/units', unitRoutes);
 app.use('/api/item-categories', ItemCategoryRoutes);
 app.use('/api/items', ItemRoutes); 
 app.use('/api/recipe-experts', RecipeExpertRoutes); 
+app.use('/api/branch', BranchRoutes); 
+app.use('/api/brand', BrandRoutes); 
+app.use('/api/currency', CurrencyRoutes); 
 
 // Start server
 const PORT = 5050;
