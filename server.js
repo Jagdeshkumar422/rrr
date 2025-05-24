@@ -12,6 +12,8 @@ const RecipeExpertRoutes = require('./routes/recipeExpertRoutes');
 const BranchRoutes = require('./routes/branchRoutes');
 const BrandRoutes = require('./routes/brandRoute');
 const CurrencyRoutes = require('./routes/currenxyRoute');
+const MenuItemRoutes = require('./routes/MenuItem');
+const TaxRoutes = require('./routes/tax');
 
 const app = express();
 app.use(cors());
@@ -41,7 +43,9 @@ app.use('/api/items', ItemRoutes);
 app.use('/api/recipe-experts', RecipeExpertRoutes); 
 app.use('/api/branch', BranchRoutes); 
 app.use('/api/brand', BrandRoutes); 
-app.use('/api/currency', CurrencyRoutes); 
+app.use('/api/currency', CurrencyRoutes);
+app.use('/api/menu', MenuItemRoutes) 
+app.use('/api/tax', TaxRoutes) 
 
 // Start server
 const PORT = 5050;
